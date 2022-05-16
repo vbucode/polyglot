@@ -2,12 +2,6 @@ import random
 import re
 import json
 
-data = """{"i will not travel in winter":"я не буду путешествовать зимой",
-     "what are you doing next week?":"что ты делаешь на следующей неделе?",
-     "what do you think?":"что скажешь?",
-     "how long have you know her?":"как давно вы с ней знакомы?",
-     "is this your cellphone?":"это твой телефон?"}"""
-
 listforhelp = ["i you he she we they it",
                "am are is",
                "be was were",
