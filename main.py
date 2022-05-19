@@ -9,7 +9,8 @@ listforhelp = ["i you he she we they it",
                "do did does",
                "this that their"]
 
-d = json.loads(data)
+with open("data.json", "r") as file:
+    d = json.load(file)
 
 def main():
     wl = []
