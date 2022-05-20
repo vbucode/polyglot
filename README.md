@@ -1,3 +1,3 @@
 # polyglot
 
-app to learn language
+to learn language
