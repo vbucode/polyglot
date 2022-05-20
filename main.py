@@ -4,7 +4,7 @@ from polyglot import Polyglot
 
 root = tkinter.Tk()
 root.title("Polyglot")
-root.geometry("405x230")
+root.geometry("430x180")
 root.configure(bg = "black")
 
 def chek():
@@ -23,8 +23,10 @@ def chek():
             break
         elif count == len(wl):
             lbl3.configure(text = "Good!")
+    ent.delete(0, "end")
+    step()
 
-def step1():
+def step():
     global po
     p = Polyglot()
     po = p.onel()
@@ -44,10 +46,10 @@ btn1 = tkinter.Button(root, text = "next", bg = "gray", command = chek)
 lbl1.pack()
 lbl2.pack()
 lbl3.pack()
-ent.place(x = 5, y = 190 )
-btn1.place(x = 340, y = 185)
+ent.place(x = 15, y = 100 )
+btn1.place(x = 350, y = 96)
 
-step1()
+step()
 
 if __name__ == "__main__":
     root.mainloop()
