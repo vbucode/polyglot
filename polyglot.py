@@ -2,12 +2,15 @@ import random
 import re
 import json
 
-listforhelp = ["i you he she we they it",
+listforhelp = ["i you he she we they",
+               "me him her us them",
                "am are is",
                "be was were",
                "have has had",
-               "do did does",
-               "this that their"]
+               "will, not, shall",
+               "do doesn't did did not does",
+               "this that their",
+               "what who where when why how"]
 
 with open("data.json", "r") as file:
     d = json.load(file)
