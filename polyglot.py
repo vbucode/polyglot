@@ -8,7 +8,7 @@ listforhelp = ["i you he she we they",
                "be was were",
                "have has had",
                "will, not, shall",
-               "do doesn't did did not does",
+               "do doesn't did't did does",
                "this that their",
                "what who where when why how"]
 
@@ -29,7 +29,7 @@ class Polyglot:
     def twol(self):
         global engvar
         tlist = []
-        ispl = re.split("[\W\s]", engvar)
+        ispl = re.split("\s", engvar)
         for i in ispl:
             for j in listforhelp:
                 x = j.split(" ")

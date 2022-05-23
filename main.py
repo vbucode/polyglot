@@ -14,8 +14,8 @@ def chek():
     wl = []
     count = 0
     tr = ent.get()
-    wl = re.split("[\W\s]", tr)
-    pol = re.split("[\W\s]", po[0])
+    wl = re.split("[\s]", tr)
+    pol = re.split("[\s]", po[0])
     for i in wl:
         count += 1
         if i != pol[count-1]:
