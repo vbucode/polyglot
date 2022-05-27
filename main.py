@@ -9,33 +9,32 @@ root.configure(bg = "black")
 flag = 0
 
 def chek():
-    global po
+    global po1
     tr = ""
     wl = []
     count = 0
     tr = ent.get()
     wl = re.split("[\s]", tr)
-    pol = re.split("[\s]", po[0])
+    pol = re.split("[\s]", po1[0])
     for i in wl:
         count += 1
-        if i != pol[count-1]:
-            txt = "right answer: " + po[0]
+        if i != pol[count - 1]:
+            txt = "right answer: " + po1[0]
             lbl3.configure(text = ent.get())
             lbl4.configure(text = txt)
             break
         elif count == len(wl):
-            lbl3.configure(text = po[0])
+            lbl3.configure(text = po1[0])
             lbl4.configure(text = "Good!")
     ent.delete(0, "end")
 
 def step():
-    global po
+    global po1
     p = Polyglot()
-    po = p.onel()
-    pt = p.twol()
-    pos = " ".join(po[1])
-    pts = " ".join(pt)
-    lbl1.configure(text = pos)
+    po = p.load()
+    po1, po2 = po
+    pts = " ".join(po2)
+    lbl1.configure(text = po1[1])
     lbl2.configure(text = pts)
     lbl3.configure(text = "")
     lbl4.configure(text = "")

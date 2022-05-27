@@ -18,17 +18,12 @@ with open("data.json", "r") as file:
 class Polyglot:
     def _init_(self):
         pass
-    def onel(self):
+    def load(self):
         xlist = []
-        global engvar
-        global ruvar
+        tlist = []
         engvar, ruvar = random.choice(list(d.items()))
         xlist.append(engvar)
         xlist.append(ruvar)
-        return xlist
-    def twol(self):
-        global engvar
-        tlist = []
         ispl = re.split("\s", engvar)
         for i in ispl:
             for j in listforhelp:
@@ -41,4 +36,4 @@ class Polyglot:
                         if y not in tlist:
                             tlist.append(y)
                             c -= 1
-        return tlist
+        return xlist, tlist
