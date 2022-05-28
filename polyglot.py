@@ -16,24 +16,25 @@ with open("data.json", "r") as file:
     d = json.load(file)
 
 class Polyglot:
+    xlist = []
+    tlist = []
     def _init_(self):
-        pass
+        self.engvar = ""
+        self.ruvar = ""
     def load(self):
-        xlist = []
-        tlist = []
-        engvar, ruvar = random.choice(list(d.items()))
-        xlist.append(engvar)
-        xlist.append(ruvar)
-        ispl = re.split("\s", engvar)
+        self.engvar, self.ruvar = random.choice(list(d.items()))
+        self.xlist.append(self.engvar)
+        self.xlist.append(self.ruvar)
+        ispl = re.split("\s", self.engvar)
         for i in ispl:
             for j in listforhelp:
                 x = j.split(" ")
                 if i in x:
                     c = 2
-                    tlist.append(i)
+                    self.tlist.append(i)
                     while c > 0:
                         y = random.choice(x)
-                        if y not in tlist:
-                            tlist.append(y)
+                        if y not in self.tlist:
+                            self.tlist.append(y)
                             c -= 1
-        return xlist, tlist
+        return self.xlist, self.tlist
