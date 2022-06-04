@@ -18,9 +18,8 @@ with open("data.json", "r") as file:
 class Polyglot:
     xlist = []
     tlist = []
-    def _init_(self):
-        self.engvar = ""
-        self.ruvar = ""
+    engvar = ""
+    ruvar = ""
     def load(self):
         self.engvar, self.ruvar = random.choice(list(d.items()))
         self.xlist.append(self.engvar)
